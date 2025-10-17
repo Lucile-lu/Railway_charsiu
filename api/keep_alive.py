@@ -1,4 +1,4 @@
-# keep_alive.py
+# keep_alive.py（本地或 Replit 用）
 from flask import Flask
 from threading import Thread
 
@@ -14,3 +14,8 @@ def run():
 def keep_alive():
     t = Thread(target=run)
     t.start()
+
+# -----------------------------
+# Vercel 版本的 handler
+def handler(request, response):
+    return "Bot keep-alive running!"
