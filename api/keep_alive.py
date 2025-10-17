@@ -23,4 +23,5 @@ if os.environ.get("VERCEL") is None:
 # -----------------------------
 # 這段會被 Vercel 自動呼叫
 def handler(request, response):
-    return "Bot keep-alive running!"
+    response.status_code = 200
+    return "✅ Bot charsiu running!"
