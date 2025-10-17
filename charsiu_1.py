@@ -37,6 +37,12 @@ RESPONSES_DATA = {
     "生氣": {"file": "angry.gif"},
     "謝謝大家": {"file": "thx.gif"},
     "wtf": {"file": "wtf.gif"},
+    "嗯?": {"file": "umm.gif"},
+    "好棒": {"file": "good.jpg"},
+    "哼": {"file": "hun.gif"},
+    "哇": {"file": "wow.gif"},
+    "優秀": {"file": "see.jpg"},
+    
 
     # 可以在這裡繼續新增
     # "關鍵字": {"text": "文字回覆", "file": "檔名.gif 或 png"}
