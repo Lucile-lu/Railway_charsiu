@@ -60,9 +60,17 @@ RESPONSES_DATA = {
     "都給你": {"file": "all for you.gif"},
     "玲玲啊": {"file": "appear"},
     "再見": {"file": "byebye.gif"},
-    "閉眼": {"file": "close eyes"},
-    "無聊": {"file": "chew"},
-    "不理解": {"file": "well"},
+    "閉眼": {"file": "close eyes.gif"},
+    "無聊": {"file": "chew.gif"},
+    "不理解": {"file": "well.gif"},
+    "辛苦": {"file": "claps.gif"},
+    "給我吃": {"file": "eateateat.gif"},
+    "不懂": {"file": "scratch.gif"},
+    "沒關係": {"file": "no mind.gif"},
+    "傻眼": {"file": "awkward.gif"},
+    "拒絕": {"file": "nonono.gif"},
+    "醒": {"file": "wake.gif"},
+    "優秀": {"file": "crown.gif"},
 
 
     # 可以在這裡繼續新增
