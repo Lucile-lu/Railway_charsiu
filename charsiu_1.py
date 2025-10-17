@@ -2,10 +2,8 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
-from keep_alive import keep_alive
 
-load_dotenv()  # ← 這行一定要有！
-
+load_dotenv()  # ← 一定要有
 
 # ======================
 # 讀取 Token（從環境變數）
@@ -40,7 +38,7 @@ RESPONSES = {
 # ======================
 @bot.event
 async def on_ready():
-    print(f"✅ 機器人已登入 --> {bot.user} (id={bot.user.id})")
+    print(f"✅ 機器人已登入 --> {bot.user} (id={getattr(bot.user, 'id', 'Unknown')})")
 
 # ======================
 # 使用 listen 監聽訊息（不覆蓋 commands）
@@ -51,17 +49,20 @@ async def remind(message):
     if message.author.bot:
         return
 
-    # debug：確認有收到訊息
-    print(f"[MESSAGE] {message.author} in #{getattr(message.channel, 'name', 'DM')}: {message.content}")
+    # 確認有 channel 並處理
+    channel_name = getattr(message.channel, 'name', 'DM')
+    print(f"[MESSAGE] {message.author} in #{channel_name}: {message.content}")
 
     msg_lower = message.content.lower()
     for key, reply in RESPONSES.items():
         if key in msg_lower:
-            await message.channel.send(reply)
+            # 確認 channel 可以 send
+            if message.channel is not None:
+                await message.channel.send(reply)
             break
 
 # ======================
-# 指令：#叉燒、#hello、#ping、#helpme
+# 指令
 # ======================
 @bot.command(name="叉燒")
 async def charsiu_cmd(ctx):
