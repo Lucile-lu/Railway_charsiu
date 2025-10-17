@@ -2,17 +2,14 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
-from keep_alive import keep_alive
 
 # ======================
-# keep_alive 與環境變數
+# 讀取環境變數
 # ======================
-keep_alive()
 load_dotenv()
-
 TOKEN = os.getenv("DISCORD_TOKEN_CHAR_SIU")
 if not TOKEN:
-    raise ValueError("❌ 找不到 DISCORD_TOKEN_CHAR_SIU，請確認環境變數或 .env")
+    raise ValueError("❌ 找不到 DISCORD_TOKEN_CHAR_SIU，請確認 .env 或環境變數")
 
 # ======================
 # Bot 設定
@@ -21,7 +18,7 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="#", intents=intents)
 
 # ======================
-# 關鍵字回覆
+# 關鍵字回覆設定
 # ======================
 RESPONSES = {
     "hey 叉燒": "我是叉燒🐶，大家做數據加油加油🙌",
@@ -44,16 +41,12 @@ async def on_ready():
 # ======================
 @bot.event
 async def on_member_join(member):
-    # 忽略機器人自己
     if member.bot:
         return
-
-    # 找到指定頻道
-    guild = member.guild
-    channel = discord.utils.get(guild.text_channels, name=WELCOME_CHANNEL_NAME)
+    channel = discord.utils.get(member.guild.text_channels, name=WELCOME_CHANNEL_NAME)
     if channel:
         await channel.send(
-            f"👋 我是玲玲的叉燒🐶\n"
+            f"👋 我是機器人叉燒🐶\n"
             f"✨ 歡迎 {member.mention} 加入鄺玲玲的天使金毛🦮🪽\n"
             f"📌 請先閱讀群規（置頂/公告），一起營造乾淨追星環境🤍"
         )
@@ -65,14 +58,10 @@ async def on_member_join(member):
 async def remind(message):
     if message.author.bot:
         return
-
-    channel_name = getattr(message.channel, 'name', 'DM')
-    print(f"[MESSAGE] {message.author} in #{channel_name}: {message.content}")
-
     msg_lower = message.content.lower()
     for key, reply in RESPONSES.items():
         if key in msg_lower:
-            if message.channel is not None:
+            if message.channel:
                 await message.channel.send(reply)
             break
 
@@ -81,7 +70,7 @@ async def remind(message):
 # ======================
 @bot.command(name="叉燒")
 async def charsiu_cmd(ctx):
-    await ctx.send("我是玲玲的叉燒🐶")
+    await ctx.send("我是機器人叉燒🐶")
 
 @bot.command()
 async def hello(ctx):
@@ -101,7 +90,14 @@ async def helpme(ctx):
     )
 
 # ======================
-# 啟動 Bot
+# 自動重連與啟動
 # ======================
+def run_bot():
+    while True:
+        try:
+            bot.run(TOKEN)
+        except Exception as e:
+            print(f"⚠️ Bot 崩潰或斷線，正在重啟... 錯誤: {e}")
+
 if __name__ == "__main__":
-    bot.run(TOKEN)
+    run_bot()
