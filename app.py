@@ -1,19 +1,16 @@
-from flask import Flask
-from threading import Thread
+from flask import Flask, request
 
-app = Flask('')
+app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
-    return "Bot is alive!"
+    return "✅ Bot keep-alive is running!", 200
 
-def run():
-    app.run(host='0.0.0.0', port=8080)
+@app.errorhandler(401)
+def unauthorized(e):
+    return "Unauthorized access disabled.", 200
 
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
-
-# 讓 Vercel 可以直接處理 HTTP
-if __name__ == "__main__":
-    app.run()
+# Vercel 用的 handler（一定要有）
+def handler(request, response):
+    response.text = "✅ Bot keep-alive is running via Vercel!"
+    return response
