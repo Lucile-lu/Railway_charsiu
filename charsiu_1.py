@@ -18,13 +18,28 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="#", intents=intents)
 
 # ======================
-# 關鍵字回覆設定
+# 回覆設定（文字/圖片/GIF）
 # ======================
-RESPONSES = {
-    "hey 叉燒": "我是叉燒🐶，大家做數據加油加油🙌",
-    "叉燒晚安": "叉燒也要睡覺了😴大家晚安🐶早點休息喔💤",
-    "晚安叉燒": "晚安晚安🐶叉燒要睡了💤",
-    "叉燒": "我是叉燒，媽媽最愛我了🥰，歡迎你加入群組，置頂版規記得要去看喔🐶"
+# 統一管理，方便後續新增
+RESPONSES_DATA = {
+    "hey 叉燒": {"text": "我是叉燒🐶，大家做數據加油加油🙌"},
+    "叉燒晚安": {"text": "叉燒也要睡覺了😴大家晚安🐶早點休息喔💤"},
+    "晚安叉燒": {"text": "晚安晚安🐶叉燒要睡了💤"},
+    "叉燒": {
+        "text": "我是叉燒，媽媽最愛我了🥰，歡迎你加入群組，置頂版規記得要去看喔🐶",
+        "file": "play with charsiu.gif"},  
+    "驕傲": {"file": "proud.gif"},
+    "臭": {"file": "smelly.gif"},
+    "喔~": {"file": "oh.gif"},
+    "蛤": {"file": "hhu.gif"},
+    "不喜歡": {"file": "unhappy.gif"},
+    "好吃": {"file": "yummy.gif"},
+    "生氣": {"file": "angry.gif"},
+    "謝謝大家": {"file": "thx.gif"},
+    "wtf": {"file": "wtf.gif"},
+
+    # 可以在這裡繼續新增
+    # "關鍵字": {"text": "文字回覆", "file": "檔名.gif 或 png"}
 }
 
 WELCOME_CHANNEL_NAME = "歡迎訊息與相關規則🎉"
@@ -45,24 +60,31 @@ async def on_member_join(member):
         return
     channel = discord.utils.get(member.guild.text_channels, name=WELCOME_CHANNEL_NAME)
     if channel:
-        await channel.send(
-            f"👋 我是機器人叉燒🐶\n"
-            f"✨ 歡迎 {member.mention} 加入鄺玲玲的天使金毛🦮🪽\n"
-            f"📌 請先閱讀群規（置頂/公告），一起營造乾淨追星環境🤍"
-        )
+        # 可以同時支援文字 + GIF
+        welcome_text = f"👋 我是機器人叉燒🐶\n✨ 歡迎 {member.mention} 加入鄺玲玲的天使金毛🦮🪽\n📌 請先閱讀群規（置頂/公告），一起營造乾淨追星環境🤍"
+        gif_path = "chashiu.gif"
+        if os.path.exists(gif_path):
+            await channel.send(content=welcome_text, file=discord.File(gif_path))
+        else:
+            await channel.send(welcome_text)
 
 # ======================
-# 訊息監聽（關鍵字回覆）
+# 訊息監聽（文字 + 圖片/GIF）
 # ======================
 @bot.listen("on_message")
 async def remind(message):
     if message.author.bot:
         return
+
     msg_lower = message.content.lower()
-    for key, reply in RESPONSES.items():
+    for key, data in RESPONSES_DATA.items():
         if key in msg_lower:
-            if message.channel:
-                await message.channel.send(reply)
+            text = data.get("text", "")
+            file_path = data.get("file")
+            if file_path and os.path.exists(file_path):
+                await message.channel.send(content=text, file=discord.File(file_path))
+            else:
+                await message.channel.send(text)
             break
 
 # ======================
