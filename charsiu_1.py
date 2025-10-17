@@ -3,29 +3,25 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 from keep_alive import keep_alive
-keep_alive()
-load_dotenv()  # ← 一定要有
 
 # ======================
-# 讀取 Token（從環境變數）
+# keep_alive 與環境變數
 # ======================
+keep_alive()
+load_dotenv()
+
 TOKEN = os.getenv("DISCORD_TOKEN_CHAR_SIU")
 if not TOKEN:
     raise ValueError("❌ 找不到 DISCORD_TOKEN_CHAR_SIU，請確認環境變數或 .env")
 
 # ======================
-# 啟動 keep_alive（會啟一個簡單的網頁伺服器）
-# ======================
-keep_alive()
-
-# ======================
-# Intents 與 Bot 設定
+# Bot 設定
 # ======================
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="#", intents=intents)
 
 # ======================
-# 關鍵字回覆設定
+# 關鍵字回覆
 # ======================
 RESPONSES = {
     "hey 叉燒": "我是叉燒🐶，大家做數據加油加油🙌",
@@ -34,30 +30,48 @@ RESPONSES = {
     "叉燒": "我是叉燒，媽媽最愛我了🥰，歡迎你加入群組，置頂版規記得要去看喔🐶"
 }
 
+WELCOME_CHANNEL_NAME = "歡迎訊息與相關規則🎉"
+
 # ======================
-# 事件：上線
+# Bot 上線事件
 # ======================
 @bot.event
 async def on_ready():
     print(f"✅ 機器人已登入 --> {bot.user} (id={getattr(bot.user, 'id', 'Unknown')})")
 
 # ======================
-# 使用 listen 監聽訊息（不覆蓋 commands）
+# 新成員加入事件
+# ======================
+@bot.event
+async def on_member_join(member):
+    # 忽略機器人自己
+    if member.bot:
+        return
+
+    # 找到指定頻道
+    guild = member.guild
+    channel = discord.utils.get(guild.text_channels, name=WELCOME_CHANNEL_NAME)
+    if channel:
+        await channel.send(
+            f"👋 我是玲玲的叉燒🐶\n"
+            f"✨ 歡迎 {member.mention} 加入鄺玲玲的天使金毛🦮🪽\n"
+            f"📌 請先閱讀群規（置頂/公告），一起營造乾淨追星環境🤍"
+        )
+
+# ======================
+# 訊息監聽（關鍵字回覆）
 # ======================
 @bot.listen("on_message")
 async def remind(message):
-    # 忽略來自機器人的訊息（包含自己）
     if message.author.bot:
         return
 
-    # 確認有 channel 並處理
     channel_name = getattr(message.channel, 'name', 'DM')
     print(f"[MESSAGE] {message.author} in #{channel_name}: {message.content}")
 
     msg_lower = message.content.lower()
     for key, reply in RESPONSES.items():
         if key in msg_lower:
-            # 確認 channel 可以 send
             if message.channel is not None:
                 await message.channel.send(reply)
             break
@@ -67,7 +81,7 @@ async def remind(message):
 # ======================
 @bot.command(name="叉燒")
 async def charsiu_cmd(ctx):
-    await ctx.send("我是機器人叉燒🐶")
+    await ctx.send("我是玲玲的叉燒🐶")
 
 @bot.command()
 async def hello(ctx):
