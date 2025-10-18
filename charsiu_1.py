@@ -66,11 +66,13 @@ RESPONSES_DATA = {
     "辛苦": {"file": "claps.gif"},
     "給我吃": {"file": "eateateat.gif"},
     "不懂": {"file": "scratch.gif"},
-    "沒關係": {"file": "no mind.gif"},
     "傻眼": {"file": "awkward.gif"},
     "拒絕": {"file": "nonono.gif"},
     "醒": {"file": "wake.gif"},
     "優秀": {"file": "crown.gif"},
+    "走開": {"file": "go away.gif"},
+    "平靜": {"file": "go away.gif"},
+
 
 
     # 可以在這裡繼續新增
