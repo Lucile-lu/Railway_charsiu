@@ -31,7 +31,7 @@ RESPONSES_DATA = {
             "file": "play with charsiu.gif"},  
     "驕傲": {"file": "proud.gif"},
     "臭": {"file": "smelly.gif"},
-    "喔~": {"file": "oh.gif"},
+    "喔～": {"file": "oh.gif"},
     "蛤": {"file": "hhu.gif"},
     "開心": {"file": "happy.gif"},
     "不喜歡": {"file": "unhappy.gif"},
@@ -66,12 +66,12 @@ RESPONSES_DATA = {
     "辛苦": {"file": "claps.gif"},
     "給我吃": {"file": "eateateat.gif"},
     "不懂": {"file": "scratch.gif"},
-    "傻眼": {"file": "awkward.gif"},
+    "尷尬": {"file": "awkward.gif"},
     "拒絕": {"file": "nonono.gif"},
     "醒": {"file": "wake.gif"},
     "優秀": {"file": "crown.gif"},
     "走開": {"file": "go away.gif"},
-    "平靜": {"file": "go away.gif"},
+    "算了": {"file": "peace.gif"},
 
 
 
