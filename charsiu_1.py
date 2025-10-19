@@ -76,7 +76,7 @@ RESPONSES_DATA = {
     "優秀": {"file": "crown.gif"},
     "走開": {"file": "go away.gif"},
     "算了": {"file": "peace.gif"},
-    "好乖": {"file": "goodjob.gif"},
+    "乖": {"file": "goodjob.gif"},
     "ok": {"file": "ok.gif"},
     "求求": {"file": "plz.gif"},
     "有病": {"file": "ignore.gif"},
