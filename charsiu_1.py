@@ -98,7 +98,7 @@ RESPONSES_DATA = {
     "我來": {"file": "u and me.gif"},
     "趕粉": {"file": "keep away.gif"},
     "喔不": {"file": "oh no.gif"},
-    "可憐": {"file": "poor.gif"},
+    "好可憐喔": {"file": "poor.gif"},
     "讚": {"file": "tumbsup.gif"},
 
 
