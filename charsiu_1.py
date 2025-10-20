@@ -86,6 +86,8 @@ RESPONSES_DATA = {
     "美女": {"file": "beauty girl.gif"},
     "我想想": {"file": "loading.gif"},
     "...": {"file": "nothing to say.gif"},
+    "⋯": {"file": "nothing to say.gif"},
+    "…": {"file": "nothing to say.gif"},
     "頭痛": {"file": "headache2.gif"},
     "說說": {"file": "saysay.gif"},
     "請說": {"file": "saysay2.gif"},
@@ -100,6 +102,10 @@ RESPONSES_DATA = {
     "喔不": {"file": "oh no.gif"},
     "好可憐喔": {"file": "poor.gif"},
     "讚": {"file": "thumbsup.gif"},
+    "喝": {"file": "drink.gif"},
+    "聽不下去": {"file": "un listen.gif"},
+    "不想聽": {"file": "un listen.gif"},
+    "震驚": {"file": "shock.gif"},
 
 
     # 可以在這裡繼續新增
