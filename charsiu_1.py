@@ -95,6 +95,7 @@ RESPONSES_DATA = {
     "變": {"file": "tawan.gif"},
     "冷靜": {"file": "clam.gif"},
     "靜靜": {"file": "clam.gif"},
+    "靜一": {"file": "clam.gif"},
     "自閉": {"file": "clam.gif"},
     "不用管": {"file": "tounge.gif"},
     "啊啊啊": {"file": "hahaha.gif"},
