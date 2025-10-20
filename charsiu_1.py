@@ -94,6 +94,8 @@ RESPONSES_DATA = {
     "哭": {"file": "qq.gif"},
     "變": {"file": "tawan.gif"},
     "冷靜": {"file": "clam.gif"},
+    "靜靜": {"file": "clam.gif"},
+    "自閉": {"file": "clam.gif"},
     "不用管": {"file": "tounge.gif"},
     "啊啊啊": {"file": "hahaha.gif"},
     "你好": {"file": "hi.gif"},
@@ -104,7 +106,6 @@ RESPONSES_DATA = {
     "讚": {"file": "thumbsup.gif"},
     "喝": {"file": "drink.gif"},
     "聽不下去": {"file": "un listen.gif"},
-    "不想聽": {"file": "un listen.gif"},
     "震驚": {"file": "shock.gif"},
 
 
