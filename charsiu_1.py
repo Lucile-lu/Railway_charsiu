@@ -99,7 +99,7 @@ RESPONSES_DATA = {
     "趕粉": {"file": "keep away.gif"},
     "喔不": {"file": "oh no.gif"},
     "好可憐喔": {"file": "poor.gif"},
-    "讚": {"file": "tumbsup.gif"},
+    "讚": {"file": "thumbsup.gif"},
 
 
     # 可以在這裡繼續新增
