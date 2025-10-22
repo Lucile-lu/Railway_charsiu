@@ -84,7 +84,7 @@ RESPONSES_DATA = {
     "沒關係": {"file": "okay na.jpg"},
     "美女": {"file": "beauty girl.gif"},
     "我想想": {"file": "loading.gif"},
-    "傻眼": {"file": "nothing to say.gif"},
+    "無語": {"file": "nothing to say.gif"},
     "頭痛": {"file": "headache2.gif"},
     "說說": {"file": "saysay.gif"},
     "聽聽": {"file": "saysay.gif"},
@@ -103,6 +103,7 @@ RESPONSES_DATA = {
     "喝": {"file": "drink.gif"},
     "聽不下去": {"file": "un listen.gif"},
     "震驚": {"file": "shock.gif"},
+    "還好嗎": {"file": "r u ok.jpg"},
 
 
     # 可以在這裡繼續新增
