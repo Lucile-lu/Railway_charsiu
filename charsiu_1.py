@@ -41,6 +41,7 @@ RESPONSES_DATA = {
     "無法理解": {"file": "wtf.gif"},
     "???": {"file": "umm.gif"},
     "好棒": {"file": "good.jpg"},
+    "很棒": {"file": "very good.gif"},
     "拍手": {"file": "claps1.gif"},
     "氣死": {"file": "hun.gif"},
     "哇塞": {"file": "wow.gif"},
@@ -57,7 +58,7 @@ RESPONSES_DATA = {
     "才不信": {"file": "Don't believe it.gif"},
     "不要啊": {"file": "i dont want.gif"},
     "好冷": {"file": "cold.gif"},
-    "吃飯": {"file": "eat.gif"},
+    "吃飽": {"file": "pat.gif"},
     "愛你": {"file": "luv.gif"},
     "給你": {"file": "all for you.gif"},
     "玲啊": {"file": "appear.gif"},
@@ -80,7 +81,7 @@ RESPONSES_DATA = {
     "求求": {"file": "plz.gif"},
     "有病": {"file": "ignore.gif"},
     "大家加油": {"file": "kypong.gif"},
-    "煩": {"file": "annoy.jpg"},
+    "好煩": {"file": "annoy.jpg"},
     "沒關係": {"file": "okay na.jpg"},
     "美女": {"file": "beauty girl.gif"},
     "我想想": {"file": "loading.gif"},
@@ -104,6 +105,12 @@ RESPONSES_DATA = {
     "聽不下去": {"file": "un listen.gif"},
     "震驚": {"file": "shock.gif"},
     "還好嗎": {"file": "r u ok.jpg"},
+    "oii": {"file": "oiiii.gif"},
+    "疑問": {"file": "question.gif"},
+    "思考": {"file": "drink2.gif"},
+
+
+
 
 
     # 可以在這裡繼續新增
