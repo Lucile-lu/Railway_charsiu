@@ -106,8 +106,8 @@ RESPONSES_DATA = {
     "震驚": {"file": "shock.gif"},
     "還好嗎": {"file": "r u ok.jpg"},
     "oii": {"file": "oiiii.gif"},
-    "疑問": {"file": "question.gif"},
-    "思考": {"file": "drink2.gif"},
+    "迷惑": {"file": "question.gif"},
+    "找不到": {"file": "drink2.gif"},
 
 
 
