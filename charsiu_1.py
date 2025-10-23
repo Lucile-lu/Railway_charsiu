@@ -108,6 +108,7 @@ RESPONSES_DATA = {
     "oii": {"file": "oiiii.gif"},
     "迷惑": {"file": "question.gif"},
     "找不到": {"file": "drink2.gif"},
+    "閉嘴": {"file": "shut up.gif"},
 
 
 
