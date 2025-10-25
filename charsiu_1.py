@@ -114,6 +114,7 @@ RESPONSES_DATA = {
     "嫌棄": {"file": "dislike.gif"},
     "偷感": {"file": "stole.gif"},
     "嚇到": {"file": "eat hand.gif"},
+    "加油": {"file": "kupong.gif"},
 
     
 
