@@ -68,6 +68,7 @@ RESPONSES_DATA = {
     "吃瓜": {"file": "chew.gif"},
     "不理解": {"file": "well.gif"},
     "看了什麼": {"file": "read.gif"},
+    "說什麼": {"file": "what did u say.gif"},
     "強迫": {"file": "eateateat.gif"},
     "看不懂": {"file": "scratch.gif"},
     "尷尬": {"file": "awkward.gif"},
@@ -87,11 +88,11 @@ RESPONSES_DATA = {
     "我想想": {"file": "loading.gif"},
     "無語": {"file": "nothing to say.gif"},
     "頭痛": {"file": "headache2.gif"},
-    "說說": {"file": "saysay.gif"},
-    "聽聽": {"file": "saysay.gif"},
+    "說看": {"file": "saysay.gif"},
+    "聽看": {"file": "saysay.gif"},
     "請說": {"file": "saysay2.gif"},
     "哭哭哭": {"file": "qq.gif"},
-    "冷靜": {"file": "clam.gif"},
+    "冷靜一下": {"file": "clam.gif"},
     "自閉": {"file": "clam.gif"},
     "不用管": {"file": "tounge.gif"},
     "啊啊啊": {"file": "hahaha.gif"},
@@ -105,10 +106,16 @@ RESPONSES_DATA = {
     "聽不下去": {"file": "un listen.gif"},
     "震驚": {"file": "shock.gif"},
     "還好嗎": {"file": "r u ok.jpg"},
-    "oii": {"file": "oiiii.gif"},
+    "oi": {"file": "oiiii.gif"},
     "迷惑": {"file": "question.gif"},
     "找不到": {"file": "drink2.gif"},
     "閉嘴": {"file": "shut up.gif"},
+    "可頌": {"file": "Croissant.gif"},
+    "嫌棄": {"file": "dislike.gif"},
+    "偷感": {"file": "stole.gif"},
+    "嚇到": {"file": "eat hand.gif"},
+
+    
 
 
 
