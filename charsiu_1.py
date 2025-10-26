@@ -84,7 +84,7 @@ RESPONSES_DATA = {
     "大家加油": {"file": "kypong.gif"},
     "好煩": {"file": "annoy.jpg"},
     "沒關係": {"file": "okay na.jpg"},
-    "美女": {"file": "beauty girl.gif"},
+    "看美女是應該的": {"file": "beauty girl.gif"},
     "我想想": {"file": "loading.gif"},
     "無語": {"file": "nothing to say.gif"},
     "頭痛": {"file": "headache2.gif"},
