@@ -62,7 +62,6 @@ RESPONSES_DATA = {
     "愛你": {"file": "luv.gif"},
     "給你": {"file": "all for you.gif"},
     "玲啊": {"file": "appear.gif"},
-    "玲嗎": {"file": "meme.gif"},
     "再見": {"file": "byebye.gif"},
     "難評": {"file": "closeeyes.gif"},
     "吃瓜": {"file": "chew.gif"},
