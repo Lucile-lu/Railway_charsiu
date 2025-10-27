@@ -32,7 +32,7 @@ RESPONSES_DATA = {
     "驕傲": {"file": "proud.gif"},
     "臭": {"file": "smelly.gif"},
     "原來如此": {"file": "oh.gif"},
-    "蛤": {"file": "hhu.gif"},
+    "蛤?": {"file": "hhu.gif"},
     "好開心啊": {"file": "happy.gif"},
     "不快樂": {"file": "unhappy.gif"},
     "好吃": {"file": "yummy.gif"},
