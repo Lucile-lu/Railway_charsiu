@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -7,6 +8,12 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+=======
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+>>>>>>> d2fb8d5 (Add keep-alive functionality to the Discord bot)
 .Python
 build/
 develop-eggs/
@@ -20,6 +27,7 @@ parts/
 sdist/
 var/
 wheels/
+<<<<<<< HEAD
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -137,10 +145,17 @@ celerybeat.pid
 # Environments
 .env
 .envrc
+=======
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+>>>>>>> d2fb8d5 (Add keep-alive functionality to the Discord bot)
 .venv
 env/
 venv/
 ENV/
+<<<<<<< HEAD
 env.bak/
 venv.bak/
 
@@ -212,3 +227,8 @@ __marimo__/
 replit.nix
 .upm/
 .config/
+=======
+.idea/
+.vscode/
+*.log
+>>>>>>> d2fb8d5 (Add keep-alive functionality to the Discord bot)
