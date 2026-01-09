@@ -206,3 +206,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 .env
+
+# Replit
+.replit
+replit.nix
+.upm/
+.config/
