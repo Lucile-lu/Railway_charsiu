@@ -115,7 +115,7 @@ RESPONSES_DATA = {
     "嚇到": {"file": "eat hand.gif"},
     "加油": {"file": "kupong.gif"},
     "想怎樣": {"file": "what do u want.gif"},
-    "鄺玲玲": {"file": "hello.gif"},
+    
 
     
 
